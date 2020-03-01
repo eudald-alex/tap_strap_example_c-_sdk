@@ -1,0 +1,77 @@
+﻿<Window x:Class="test_tap.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:test_tap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="550" Background="#333333">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+
+            </Grid.RowDefinitions>
+
+            <Label Content="Text Tap:"      Foreground="White" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Mouse Values:"    Foreground="White" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label Content="Vibrate thumb:" Foreground="White" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+            <TextBlock x:Name="txb_tap" Margin="10,10,10,10" Grid.Column="0" Grid.Row="1" Background="Gainsboro" TextWrapping="Wrap"/>
+            <TextBlock x:Name="txb_air" Margin="10,10,10,10" Grid.Column="1" Grid.Row="1" Background="Gainsboro"/>
+
+            <Grid Grid.Column="2" Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Content="Raw Values:"    Foreground="White" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Thumb Values:" Foreground="White" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Content="Gyro Values:"  Foreground="White" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Grid>
+            </Grid>
+            
+            <Grid x:Name="Raw_values" Grid.Column="2" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="txb_raw_tb_x" Margin="10,10,10,10" Grid.Column="0" Grid.Row="0" Background="Gainsboro"/>
+                <TextBlock x:Name="txb_raw_tb_y" Margin="10,10,10,10" Grid.Column="0" Grid.Row="1" Background="Gainsboro"/>
+                <TextBlock x:Name="txb_raw_tb_z" Margin="10,10,10,10" Grid.Column="0" Grid.Row="2" Background="Gainsboro"/>
+                <TextBlock x:Name="txb_raw_gy_x" Margin="10,10,10,10" Grid.Column="1" Grid.Row="0" Background="Gainsboro"/>
+                <TextBlock x:Name="txb_raw_gy_y" Margin="10,10,10,10" Grid.Column="1" Grid.Row="1" Background="Gainsboro"/>
+                <TextBlock x:Name="txb_raw_gy_z" Margin="10,10,10,10" Grid.Column="1" Grid.Row="2" Background="Gainsboro"/>
+            </Grid>
+            
+
+            <Button x:Name="btn_tap"     Content="TAP"     Grid.Column="0" Grid.Row="2" Background="Gainsboro" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Width="50" Height="25" Click="btn_tap_Click"/>
+            <Button x:Name="btn_mouse"     Content="MOUSE"   Grid.Column="1" Grid.Row="2" Background="Gainsboro" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Width="50" Height="25" Click="btn_mouse_Click"/>
+            <Button x:Name="btn_raw"     Content="RAW"     Grid.Column="2" Grid.Row="2" Background="Gainsboro" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Width="50" Height="25" Click="btn_raw_Click"/>
+            <Button x:Name="btn_vibrate" Content="Vibrate" Grid.Column="1" Grid.Row="3" Background="Gainsboro" VerticalAlignment="Center" HorizontalAlignment="Center"
+                    Width="50" Height="25" Click="btn_vibrate_Click"/>
+
+        </Grid>
+    </Grid>
+</Window>
