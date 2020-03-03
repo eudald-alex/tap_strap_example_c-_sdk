@@ -96,7 +96,7 @@ namespace test_tap
                     VariablesGlobals.lletres = "v";
                     break;
                 case 28:
-                    VariablesGlobals.lletres = ". Passar a numeros -> ";
+                    VariablesGlobals.lletres = ". Numbers -> ";
                     break;
                 case 29:
                     VariablesGlobals.lletres = "c";
@@ -108,6 +108,7 @@ namespace test_tap
                     VariablesGlobals.lletres = " ";
                     break;
             }
+
 
             VariablesGlobals.str += VariablesGlobals.lletres;
             this.Dispatcher.Invoke(() =>
